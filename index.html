@@ -2,13 +2,6 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({
-          google_ad_client: "ca-pub-4651958551010776",
-          enable_page_level_ads: true
-     });
-</script>
 	    <link rel="icon" type="image/gif/png" href="BrineModz-Icon.png">
 		<title>BrineModz Discord</title>
 		<style type="text/css">
@@ -154,6 +147,43 @@
 		<iframe src="https://discordapp.com/widget?id=596434151519944705&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0"></iframe>
 		<br>
 		<footer class="Copyright"><small> Copyright &copy; 2019, BrineModz Team - All Rights Reserved</small></footer>
-		<script type="text/javascript"> var infolinks_pid = 3197447; var infolinks_wsid = 0; </script> <script type="text/javascript" src="//resources.infolinks.com/js/infolinks_main.js"></script>
+		<script language=javascript>
+    var title = new MovingTitle("BrineModz Community Discord           ", 100, 15);
+    title.init();
+	
+	function MovingTitle(writeText, interval, visibleLetters) {
+    var _instance = {};
+
+    var _currId = 0;
+    var _numberOfLetters = writeText.length;
+
+    function updateTitle() {
+        _currId += 1;
+        if(_currId > _numberOfLetters - 1) {
+            _currId = 0; 
+        }
+
+        var startId = _currId;
+        var endId = startId + visibleLetters;
+        var finalText;
+        if(endId < _numberOfLetters - 1) {
+            finalText = writeText.substring(startId, endId);
+        } else {
+            var cappedEndId = _numberOfLetters;
+            endId = endId - cappedEndId;
+
+            finalText = writeText.substring(startId, cappedEndId) +     writeText.substring(0, endId);
+        }
+
+        document.title = finalText; 
+    }
+
+    _instance.init = function() {
+        setInterval(updateTitle, interval);
+    };
+
+    return _instance;
+}
+</script>
 	</body>
 </html>
